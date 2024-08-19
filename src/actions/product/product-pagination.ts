@@ -39,5 +39,12 @@ export const getPaginatedProductsWithImages = async ({
         images: product.ProductImage.map((image) => image.url),
       })),
     };
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error fetching paginated products:", error);
+    return {
+      currentPage: page,
+      totalPages: 0,
+      products: [],
+    };
+  }
 };
