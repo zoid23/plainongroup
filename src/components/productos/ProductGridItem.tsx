@@ -43,7 +43,7 @@ export const ProductGridItem = ( { product }: Props ) => {
       <Link href={ `/producto/${ product.slug }` }>
         <Image
           src={ product.images[0] }
-          alt={ product.title }
+          alt={ product.description }
           className="w-full object-cover rounded"
           width={ 500 }
           height={ 500 }
@@ -62,10 +62,10 @@ export const ProductGridItem = ( { product }: Props ) => {
         <Link
           className="hover:text-blue-600"
           href={ `/producto/${ product.slug }` }>
-          { product.title }
+          { product.description }
         </Link>
         <span className="font-bold">${ product.price }</span>
-        <span className="font-sans">{ product.name }</span>
+        <span className="font-sans">{ product.name}</span>
         <span className="font-thin">{ product.description }</span>
 
       </div>

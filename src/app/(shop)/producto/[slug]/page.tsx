@@ -40,14 +40,14 @@ export default async function Producto( { params }: Props ) {
         
         {/* Mobile Slideshow */}
         <ProductMobileSlideshow 
-          title={ product.title }
+          title={ product.description }
           images={ product.images }
           className="block md:hidden"
         />
         
         {/* Desktop Slideshow */}
         <ProductSlideshow 
-          title={ product.title }
+          title={ product.description }
           images={ product.images }
           className="hidden md:block"
         />
@@ -59,7 +59,7 @@ export default async function Producto( { params }: Props ) {
       <div className="col-span-1 px-5">
 
         <h1 className={ ` ${ titleFont.className } antialiased font-bold text-xl` }>
-          { product.title }
+          { product.description }
         </h1>
         <p className="text-lg mb-5">${ product.price }</p>
 
